@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Component } from "react";
+class App extends Component {
+  render() {
+    return (
+      <div className="grid">
+        <div className="g-col-6">
+          <div className="embed-responsive embed-responsive-16by9  hoverable">
+            <iframe
+              className="embed-responsive-item"
+              src="https://observablehq.com/embed/@d3/animated-treemap?cells=chart%2Cviewof+index"
+              height="600px"
+              width="900px"
+            />
+          </div>
+        </div>
+        <div className="g-col-6">Namaste!</div>
+      </div>
+    );
+  }
 }
 
 export default App;

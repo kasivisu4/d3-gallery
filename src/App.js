@@ -1,19 +1,40 @@
 import { Component } from "react";
+import GraphManager from "./models/GraphManager.js";
+import GalleryView from "./components/GalleryView.js";
+import BaseView from "./components/BaseView.js";
+import Carousel from "react-bootstrap/Carousel";
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      graphs_array: [],
+      first_time: true,
+    };
+  }
+
+  addData = (data) => {
+    this.setState({ graphs_array: [...this.state.graphs_array, ...data] });
+  };
+
+  update_first_time = () => {
+    this.setState({ first_time: false });
+  };
+
   render() {
     return (
-      <div className="grid">
-        <div className="g-col-6">
-          <div className="embed-responsive embed-responsive-16by9  hoverable">
-            <iframe
-              className="embed-responsive-item"
-              src="https://observablehq.com/embed/@d3/animated-treemap?cells=chart%2Cviewof+index"
-              height="600px"
-              width="900px"
-            />
-          </div>
-        </div>
-        <div className="g-col-6">Namaste!</div>
+      <div>
+        {this.state.first_time === true ? (
+          <GraphManager
+            addData={this.addData}
+            update_first_time={this.update_first_time}
+          ></GraphManager>
+        ) : (
+          <div></div>
+        )}
+
+        <BaseView>
+          <GalleryView graphs_array={this.state.graphs_array}></GalleryView>
+        </BaseView>
       </div>
     );
   }

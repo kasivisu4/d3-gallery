@@ -13,7 +13,7 @@ class GalleryView extends Component {
     let types = [...new Set(this.props.graphs_array.map((d) => d.type))];
     console.log(types);
     return (
-      <div className="display1">
+      <div className="display">
         {types.map((t) => {
           return (
             <div>

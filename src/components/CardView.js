@@ -36,9 +36,17 @@ export default class CardView extends Component {
             .slice(this.state.index, this.state.index + 3)
             .map((card) => (
               <div className="card">
-                <div onClick={this.props.Click} disabled={this.props.Disabled}>
+                <div>
                   <iframe src={card.iframeUrl} height="300" width="300" />
                 </div>
+                <button
+                  type="button"
+                  className="btn btn-outline-success"
+                  value={card.id}
+                  onClick={this.props.details_page}
+                >
+                  Details
+                </button>
               </div>
             ))}
           <button

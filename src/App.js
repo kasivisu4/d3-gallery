@@ -79,8 +79,8 @@ class App extends Component {
               <div>
                 <GraphView
                   card={this.state.graphs_array[this.state.display_id]}
+                  type_desc_array={this.state.type_desc}
                 ></GraphView>
-                new page
               </div>
             )}
           </BaseView>

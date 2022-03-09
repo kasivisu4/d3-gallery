@@ -8,7 +8,13 @@ export default class BaseView extends Component {
           <h1 className="navbar-brand fs-1" style={{ color: "#F2B5B5" }}>
             Data Driven Gallery
           </h1>
-          <img src="/d3.png" className="" width="60" height="60" alt="" />
+          <img
+            src="/d3-gallery/d3.png"
+            className=""
+            width="60"
+            height="60"
+            alt=""
+          />
         </nav>
         {this.props.children}
         <footer className="position-relative  bottom-0 bg-dark p-1 min-vw-100">

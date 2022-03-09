@@ -1,6 +1,6 @@
 import { Component } from "react";
 import GraphView from "./GraphView";
-
+import CardView from "./CardView";
 class GalleryView extends Component {
   constructor(props) {
     super(props);
@@ -8,19 +8,18 @@ class GalleryView extends Component {
   }
 
   display() {
-    console.log("arr");
-    console.log(this.props.graphs_array);
     let types = [...new Set(this.props.graphs_array.map((d) => d.type))];
-    console.log(types);
     return (
       <div className="display">
         {types.map((t) => {
           return (
-            <div>
-              <p>{t}</p>
-              <p>
-                {this.props.graphs_array.filter((d) => d.type === t)[0].src}
-              </p>
+            <div className="mt-5">
+              <hr />
+              <p className="bg-dark text-white">{t}</p>
+
+              <CardView
+                cards={this.props.graphs_array.filter((d) => d.type === t)}
+              />
             </div>
           );
         })}

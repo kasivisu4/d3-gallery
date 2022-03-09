@@ -23,18 +23,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.first_time === true ? (
-          <GraphManager
-            addData={this.addData}
-            update_first_time={this.update_first_time}
-          ></GraphManager>
-        ) : (
-          <div></div>
-        )}
+        <body className="bg-dark text-white">
+          {this.state.first_time === true ? (
+            <GraphManager
+              addData={this.addData}
+              update_first_time={this.update_first_time}
+            ></GraphManager>
+          ) : (
+            <div></div>
+          )}
 
-        <BaseView>
-          <GalleryView graphs_array={this.state.graphs_array}></GalleryView>
-        </BaseView>
+          <BaseView>
+            <GalleryView graphs_array={this.state.graphs_array}></GalleryView>
+          </BaseView>
+        </body>
       </div>
     );
   }

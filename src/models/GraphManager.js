@@ -12,22 +12,50 @@ export default class GraphManager extends Component {
         title: "Animated TreeMap",
         src: "observablehq",
         iframeUrl:
-          "https://observablehq.com/embed/@d3/animated-treemap?cells=chart%2Cviewof+index",
+          "https://observablehq.com/embed/@d3/animated-treemap?cells=chart",
         type: "Animation",
       }),
       new Graph({
         title: "Animated TreeMap",
         src: "observablehq",
         iframeUrl:
-          "https://observablehq.com/embed/@d3/animated-treemap?cells=chart%2Cviewof+index",
-        type: "graph",
+          "https://observablehq.com/embed/@d3/animated-treemap?cells=chart",
+        type: "Animation",
       }),
       new Graph({
-        title: "Animated TreeMap",
+        title: "Zoomable Sunburst",
         src: "observablehq",
         iframeUrl:
-          "https://observablehq.com/embed/@d3/animated-treemap?cells=chart%2Cviewof+index",
-        type: "chart",
+          "https://observablehq.com/embed/@d3/zoomable-sunburst?cells=chart",
+        type: "Animation",
+      }),
+      new Graph({
+        title: "Bar Chart Race",
+        src: "observablehq",
+        iframeUrl:
+          "https://observablehq.com/embed/@d3/bar-chart-race?cells=chart",
+        type: "Animation",
+      }),
+      new Graph({
+        title: "Bar Chart Transitions",
+        src: "observablehq",
+        iframeUrl:
+          "https://observablehq.com/embed/@d3/bar-chart-transitions?cells=chart",
+        type: "Animation",
+      }),
+      new Graph({
+        title: "World Airports Voronoi",
+        src: "observablehq",
+        iframeUrl:
+          "https://observablehq.com/embed/@d3/world-airports-voronoi?cells=chart",
+        type: "Maps",
+      }),
+      new Graph({
+        title: "Voronoi Stippling",
+        src: "observablehq",
+        iframeUrl:
+          "https://observablehq.com/embed/@mbostock/voronoi-stippling?cells=image",
+        type: "Just for fun",
       }),
     ]);
 

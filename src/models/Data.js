@@ -118,7 +118,7 @@ let type_data = [
   }),
   new GraphType({
     type: "Just for fun",
-    desc: "Why not have a little fun? Life’s not just about work, you know.",
+    desc: "Why not have a little fun? Life’s not just about work, you know. ",
   }),
 ];
 export { graph_data, type_data };

@@ -54,7 +54,7 @@ class App extends Component {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Search by type,task,title"
+                        placeholder="Search by type,task,title,publisher"
                         onChange={this.filter_graph_array}
                       />
                     </div>
@@ -68,6 +68,14 @@ class App extends Component {
                         .indexOf(this.state.search_query.toUpperCase()) !==
                         -1 ||
                       p.type
+                        .toUpperCase()
+                        .indexOf(this.state.search_query.toUpperCase()) !==
+                        -1 ||
+                      p.publisher
+                        .toUpperCase()
+                        .indexOf(this.state.search_query.toUpperCase()) !==
+                        -1 ||
+                      p.task
                         .toUpperCase()
                         .indexOf(this.state.search_query.toUpperCase()) !== -1
                   )}

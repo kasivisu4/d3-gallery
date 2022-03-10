@@ -29,7 +29,7 @@ class GraphView extends Component {
             <h7> Publisher : {this.props.card.publisher} </h7>
             <br />
             <h7> Source : {this.props.card.src} </h7>
-            <br />
+            <hr />
             <h7> Task : {this.props.card.task} </h7>
           </div>
         </div>

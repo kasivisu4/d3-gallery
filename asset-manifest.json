@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/d3-gallery/static/js/main.4f8846cc.js",
+    "main.js": "/d3-gallery/static/js/main.f7463f6e.js",
     "index.html": "/d3-gallery/index.html",
-    "main.4f8846cc.js.map": "/d3-gallery/static/js/main.4f8846cc.js.map"
+    "main.f7463f6e.js.map": "/d3-gallery/static/js/main.f7463f6e.js.map"
   },
   "entrypoints": [
-    "static/js/main.4f8846cc.js"
+    "static/js/main.f7463f6e.js"
   ]
 }

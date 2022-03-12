@@ -42,8 +42,7 @@ export default class CardView extends Component {
                 <button
                   type="button"
                   className="btn btn-outline-success"
-                  value={card.id}
-                  onClick={this.props.details_page}
+                  onClick={this.props.details_page(card)}
                 >
                   Details
                 </button>

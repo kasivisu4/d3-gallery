@@ -1,5 +1,4 @@
-import Graph from "./Graph.js";
-import GraphType from "./GraphType.js";
+import { Graph, GraphType } from "./Graph.js";
 
 let graph_data = [
   new Graph({
@@ -10,7 +9,6 @@ let graph_data = [
     type: "Animation",
     publisher: "Mike Bostock",
     task: "State wise Population from 1790  based on US Census Bureau data",
-    id: 0,
   }),
   new Graph({
     title: "Zoomable Sunburst",
@@ -20,7 +18,6 @@ let graph_data = [
     type: "Animation",
     publisher: "Mike Bostock",
     task: "All libraries of Flare in hierarchial order",
-    id: 1,
   }),
   new Graph({
     title: "Bar Chart Race",
@@ -29,7 +26,6 @@ let graph_data = [
     type: "Animation",
     publisher: "Mike Bostock",
     task: "Top global brands from 2000 to 2019",
-    id: 2,
   }),
   new Graph({
     title: "Bar Chart Transitions",
@@ -39,7 +35,6 @@ let graph_data = [
     type: "Animation",
     publisher: "Mike Bostock",
     task: "Frequency graph based transistion",
-    id: 3,
   }),
   new Graph({
     title: "World Airports Voronoi",
@@ -49,7 +44,6 @@ let graph_data = [
     type: "Maps",
     publisher: "Mike Bostock",
     task: "Projection of Airports based on Long,Lat Co-ordinates",
-    id: 4,
   }),
   new Graph({
     title: "Voronoi Stippling",
@@ -58,7 +52,6 @@ let graph_data = [
       "https://observablehq.com/embed/@mbostock/voronoi-stippling?cells=image",
     type: "Just for fun",
     publisher: "Mike Bostock",
-    id: 5,
     task: "Based on Lloyd’s algorithm, displays the image in terms of points",
   }),
   new Graph({
@@ -68,7 +61,6 @@ let graph_data = [
       "https://observablehq.com/embed/@john-guerra/umap-playground?cells=chart",
     type: "Interaction",
     publisher: "John Guerra",
-    id: 6,
     task: "A notebook to play with the UMAP-JS the dimensionality reduction algorithm and visualization with your own data",
   }),
   new Graph({
@@ -78,7 +70,6 @@ let graph_data = [
       "https://observablehq.com/embed/@john-clarke/programmatically-control-a-d3-brush?cells=chart",
     type: "Animation",
     publisher: "John Clarke",
-    id: 7,
     task: "Controlling the data using d3 brush",
   }),
   new Graph({
@@ -88,8 +79,7 @@ let graph_data = [
       "https://observablehq.com/embed/@john-guerra/navio?cells=viewof+selected",
     type: "Interaction",
     publisher: "John Guerra",
-    id: 8,
-    task: "Navio is a data exploration widget that you can easily include on your code, and that you can even use on an observable to explore some data",
+    task: "Navio is a data exploration what you can easily include on your code, and that you can even use on an observable to explore some data",
   }),
   new Graph({
     title: "Solar Path",
@@ -98,7 +88,6 @@ let graph_data = [
       "https://observablehq.com/embed/@mbostock/solar-path?cells=chart",
     type: "Maps",
     publisher: "Mike Bostock",
-    id: 9,
     task: "Sun’s path throughout the year for the given location",
   }),
 ];

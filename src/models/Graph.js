@@ -1,4 +1,4 @@
-class Graph {
+export class Graph {
   title;
   src;
   iframeUrl;
@@ -14,4 +14,11 @@ class Graph {
   }
 }
 
-export default Graph;
+export class GraphType {
+  type;
+  desc;
+  constructor({ type, desc }) {
+    this.type = type;
+    this.desc = desc;
+  }
+}

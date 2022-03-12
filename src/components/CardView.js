@@ -12,7 +12,6 @@ export default class CardView extends Component {
     if (this.state.index < this.props.cards.length - 3) {
       this.setState({ index: this.state.index + 1 });
     }
-    console.log(this.props.cards.length);
   };
 
   moveLeft = () => {
@@ -34,10 +33,15 @@ export default class CardView extends Component {
           </button>
           {this.props.cards
             .slice(this.state.index, this.state.index + 3)
-            .map((card) => (
-              <div className="card">
+            .map((card, index) => (
+              <div className="card" key={index}>
                 <div>
-                  <iframe src={card.iframeUrl} height="300" width="300" />
+                  <iframe
+                    title={card.title}
+                    src={card.iframeUrl}
+                    height="300"
+                    width="300"
+                  />
                 </div>
                 <button
                   type="button"

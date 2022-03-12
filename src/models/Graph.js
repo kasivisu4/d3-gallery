@@ -2,23 +2,22 @@ export class Graph {
   title;
   src;
   iframeUrl;
-  type;
-  constructor({ title, src, iframeUrl, type, id, publisher, task }) {
+  graph_type;
+  constructor({ title, src, iframeUrl, graph_type, publisher, task }) {
     this.title = title;
     this.src = src;
     this.iframeUrl = iframeUrl;
-    this.type = type;
-    this.id = id;
+    this.graph_type = graph_type.toUpperCase();
     this.publisher = publisher;
     this.task = task;
   }
 }
 
 export class GraphType {
-  type;
+  graph_type;
   desc;
-  constructor({ type, desc }) {
-    this.type = type;
+  constructor({ graph_type, desc }) {
+    this.graph_type = graph_type.toUpperCase();
     this.desc = desc;
   }
 }

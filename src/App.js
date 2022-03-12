@@ -41,16 +41,19 @@ class App extends Component {
           {this.state.display_graph === "" ? (
             <div>
               <nav className="navbar navbar-light">
-                <form className="form-inline mt-5 mx-auto  w-50 ">
+                <form className="form-inline mt-1 mx-auto  w-50 ">
                   <div className="input-group">
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Search by type,task,title,publisher"
+                      placeholder="Search by :  type | task | title | publisher"
                       onChange={this.filter_graph_array}
                     />
                   </div>
                 </form>
+                <button type="button" class="btn btn-warning">
+                  Add Your Graph &#43;
+                </button>
               </nav>
               <GalleryView
                 graphs_array={this.state.graphs_array.filter(
@@ -58,7 +61,7 @@ class App extends Component {
                     p.title
                       .toUpperCase()
                       .indexOf(this.state.search_query.toUpperCase()) !== -1 ||
-                    p.type
+                    p.graph_type
                       .toUpperCase()
                       .indexOf(this.state.search_query.toUpperCase()) !== -1 ||
                     p.publisher
@@ -77,6 +80,7 @@ class App extends Component {
               <GraphView
                 card={this.state.display_graph}
                 type_desc_array={this.state.type_desc}
+                update_details_page={this.update_details_page}
               ></GraphView>
             </div>
           )}

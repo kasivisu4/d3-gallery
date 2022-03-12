@@ -1,5 +1,4 @@
 import { Component } from "react";
-import GraphView from "./GraphView";
 import CardView from "./CardView";
 class GalleryView extends Component {
   constructor(props) {
@@ -9,7 +8,7 @@ class GalleryView extends Component {
 
   get_desc = (t) => {
     let desc = this.props.type_desc_array.filter(
-      (d) => d.type.toUpperCase() === t.toUpperCase()
+      (d) => d.graph_type === t.toUpperCase()
     );
     return (
       <div>
@@ -23,16 +22,18 @@ class GalleryView extends Component {
   };
 
   display() {
-    let types = [...new Set(this.props.graphs_array.map((d) => d.type))];
+    let types = [...new Set(this.props.graphs_array.map((d) => d.graph_type))];
     return (
       <div className="display">
-        {types.map((t) => {
+        {types.map((t, index) => {
           return (
-            <div className="mt-1">
+            <div className="mt-1" key={index}>
               <hr />
               {this.get_desc(t)}
               <CardView
-                cards={this.props.graphs_array.filter((d) => d.type === t)}
+                cards={this.props.graphs_array.filter(
+                  (d) => d.graph_type === t
+                )}
                 details_page={this.props.details_page}
               />
             </div>

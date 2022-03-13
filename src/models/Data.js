@@ -4,7 +4,7 @@ let graph_data = [
   new Graph({
     title: "Animated TreeMap",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@d3/animated-treemap?cells=chart",
     graph_type: "Animation",
     publisher: "Mike Bostock",
@@ -13,7 +13,7 @@ let graph_data = [
   new Graph({
     title: "Zoomable Sunburst",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@d3/zoomable-sunburst?cells=chart",
     graph_type: "Animation",
     publisher: "Mike Bostock",
@@ -22,7 +22,7 @@ let graph_data = [
   new Graph({
     title: "Bar Chart Race",
     src: "observablehq",
-    iframeUrl: "https://observablehq.com/embed/@d3/bar-chart-race?cells=chart",
+    iframe_url: "https://observablehq.com/embed/@d3/bar-chart-race?cells=chart",
     graph_type: "Animation",
     publisher: "Mike Bostock",
     task: "Top global brands from 2000 to 2019",
@@ -30,7 +30,7 @@ let graph_data = [
   new Graph({
     title: "Bar Chart Transitions",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@d3/bar-chart-transitions?cells=chart",
     graph_type: "Animation",
     publisher: "Mike Bostock",
@@ -39,7 +39,7 @@ let graph_data = [
   new Graph({
     title: "World Airports Voronoi",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@d3/world-airports-voronoi?cells=chart",
     graph_type: "Maps",
     publisher: "Mike Bostock",
@@ -48,7 +48,7 @@ let graph_data = [
   new Graph({
     title: "Voronoi Stippling",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@mbostock/voronoi-stippling?cells=image",
     graph_type: "Just for fun",
     publisher: "Mike Bostock",
@@ -57,7 +57,7 @@ let graph_data = [
   new Graph({
     title: "UMAP playground",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@john-guerra/umap-playground?cells=chart",
     graph_type: "Interaction",
     publisher: "John Guerra",
@@ -66,25 +66,25 @@ let graph_data = [
   new Graph({
     title: "Programmatically control a D3 brush",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@john-clarke/programmatically-control-a-d3-brush?cells=chart",
     graph_type: "Animation",
     publisher: "John Clarke",
     task: "Controlling the data using d3 brush",
   }),
-  new Graph({
-    title: "Navio",
-    src: "observablehq",
-    iframeUrl:
-      "https://observablehq.com/embed/@john-guerra/navio?cells=viewof+selected",
-    graph_type: "Interaction",
-    publisher: "John Guerra",
-    task: "Navio is a data exploration what you can easily include on your code, and that you can even use on an observable to explore some data",
-  }),
+  // new Graph({
+  //   title: "Navio",
+  //   src: "observablehq",
+  //   iframe_url:
+  //     "https://observablehq.com/embed/@john-guerra/navio?cells=viewof+selected",
+  //   graph_type: "Interaction",
+  //   publisher: "John Guerra",
+  //   task: "Navio is a data exploration what you can easily include on your code, and that you can even use on an observable to explore some data",
+  // }),
   new Graph({
     title: "Solar Path",
     src: "observablehq",
-    iframeUrl:
+    iframe_url:
       "https://observablehq.com/embed/@mbostock/solar-path?cells=chart",
     graph_type: "Maps",
     publisher: "Mike Bostock",

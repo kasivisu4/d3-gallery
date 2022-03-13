@@ -14,7 +14,7 @@ class GraphView extends Component {
           <div className="bg-light rounded p-1">
             <iframe
               title={this.props.card.title}
-              src={this.props.card.iframeUrl + "%2Cviewof+index"}
+              src={this.props.card.iframe_url + "%2Cviewof+index"}
               height="700"
               width="850"
             />

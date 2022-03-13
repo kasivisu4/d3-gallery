@@ -38,7 +38,7 @@ export default class CardView extends Component {
                 <div>
                   <iframe
                     title={card.title}
-                    src={card.iframeUrl}
+                    src={card.iframe_url}
                     height="300"
                     width="300"
                   />

@@ -14,19 +14,13 @@ class App extends Component {
       type_desc: [],
       search_query: "",
       display_graph: "",
-      create_graph: false,
-      page: "home",
     };
   }
 
   componentDidMount() {
     this.addData(graph_data, "graphs_array");
     this.addData(type_data, "type_desc");
-    this.getDataFromIndexedDB(this.add_data_from_index);
-  }
-
-  createGraph() {
-    this.setState({ create_graph: true });
+    this.getDataFromIndexedDB(this.addDataFromIndex);
   }
 
   getDataFromIndexedDB = (add_data_from_index) => {
@@ -36,7 +30,6 @@ class App extends Component {
       function () {
         db.addCollection("graph", function () {
           db.graph.find({}).fetch(function (res, err) {
-            console.log("get data from index");
             add_data_from_index(res);
           });
         });
@@ -51,19 +44,18 @@ class App extends Component {
     this.setState({ [key]: data });
   };
 
-  add_data_from_index = (x) => {
+  addDataFromIndex = (x) => {
     return this.setState({
       graphs_array: [...this.state.graphs_array, ...x],
     });
   };
 
-  filter_graph_array = (event) => {
+  filterGraphArray = (event) => {
     this.setState({ search_query: event.target.value });
   };
 
-  update_details_page = (data) => {
+  updateDetailsPage = (data) => {
     return () => {
-      console.log(data);
       this.setState({ display_graph: data });
     };
   };
@@ -81,7 +73,7 @@ class App extends Component {
                       type="text"
                       className="form-control"
                       placeholder="Search by :  type | task | title | publisher"
-                      onChange={this.filter_graph_array}
+                      onChange={this.filterGraphArray}
                     />
                   </div>
                 </form>
@@ -108,7 +100,7 @@ class App extends Component {
                       .indexOf(this.state.search_query.toUpperCase()) !== -1
                 )}
                 type_desc_array={this.state.type_desc}
-                details_page={this.update_details_page}
+                details_page={this.updateDetailsPage}
               ></GalleryView>
             </div>
           ) : (
@@ -116,7 +108,7 @@ class App extends Component {
               <GraphView
                 card={this.state.display_graph}
                 type_desc_array={this.state.type_desc}
-                update_details_page={this.update_details_page}
+                update_details_page={this.updateDetailsPage}
               ></GraphView>
             </div>
           )}

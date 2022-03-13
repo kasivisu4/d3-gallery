@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 export default class BaseView extends Component {
+  displayChildren = () => {
+    return <div>{this.props.children}</div>;
+  };
   render() {
     return (
       <div>
@@ -16,7 +19,7 @@ export default class BaseView extends Component {
             alt=""
           />
         </nav>
-        {this.props.children}
+        {this.displayChildren()}
         <footer className="position-relative  bottom-0 bg-dark p-1 min-vw-100">
           <p className="font-weight-normal text-white">© 2022 MIT</p>
         </footer>
@@ -24,3 +27,10 @@ export default class BaseView extends Component {
     );
   }
 }
+
+BaseView.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};

@@ -1,20 +1,21 @@
 import { Component } from "react";
 import CardView from "./CardView";
+import PropTypes from "prop-types";
 class GalleryView extends Component {
   constructor(props) {
     super(props);
     this.display.bind(this);
   }
 
-  get_desc = (t) => {
+  get_desc = (graph_type) => {
     let desc = this.props.type_desc_array.filter(
-      (d) => d.graph_type === t.toUpperCase()
+      (d) => d.graph_type === graph_type.toUpperCase()
     );
     return (
       <div>
         {" "}
         <h5 className="mb-2" style={{ color: "#F2B5A0" }}>
-          {t} {desc.length !== 0 ? "- " + desc[0]["desc"] : ""}
+          {graph_type} {desc.length !== 0 ? "- " + desc[0]["desc"] : ""}
         </h5>
         <br />
       </div>
@@ -46,5 +47,10 @@ class GalleryView extends Component {
     return <div>{this.display()}</div>;
   }
 }
+
+GalleryView.propTypes = {
+  graphs_array: PropTypes.arrayOf(PropTypes.object).isRequired,
+  type_desc_array: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default GalleryView;

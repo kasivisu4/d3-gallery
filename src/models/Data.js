@@ -1,5 +1,8 @@
 import { Graph, GraphType } from "./Graph.js";
 
+/**
+ * All the initial data stored in this file
+ */
 let graph_data = [
   new Graph({
     title: "Animated TreeMap",
@@ -72,15 +75,15 @@ let graph_data = [
     publisher: "John Clarke",
     task: "Controlling the data using d3 brush",
   }),
-  // new Graph({
-  //   title: "Navio",
-  //   src: "observablehq",
-  //   iframe_url:
-  //     "https://observablehq.com/embed/@john-guerra/navio?cells=viewof+selected",
-  //   graph_type: "Interaction",
-  //   publisher: "John Guerra",
-  //   task: "Navio is a data exploration what you can easily include on your code, and that you can even use on an observable to explore some data",
-  // }),
+  new Graph({
+    title: "Navio",
+    src: "observablehq",
+    iframe_url:
+      "https://observablehq.com/embed/@john-guerra/navio?cells=viewof+selected",
+    graph_type: "Interaction",
+    publisher: "John Guerra",
+    task: "Navio is a data exploration what you can easily include on your code, and that you can even use on an observable to explore some data",
+  }),
   new Graph({
     title: "Solar Path",
     src: "observablehq",

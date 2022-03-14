@@ -73,6 +73,12 @@ export class Graph {
 export class GraphType {
   graph_type;
   desc;
+
+  /**
+   *
+   * @param {string} graph_type The type of the graph
+   * @param {string} desc The description of the graph
+   */
   constructor({ graph_type, desc }) {
     this.graph_type = graph_type.toUpperCase();
     this.desc = desc;

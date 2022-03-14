@@ -34,18 +34,12 @@ export default class AddGraph extends Component {
       { namespace: "d3-gallery" },
       function () {
         db.addCollection("graph", function () {
-          db.graph.find({ iframe_url: data.iframe_url }).fetch(
-            function () {
-              db.graph.upsert(data, function () {
-                callBack("Inserted");
-                console.log("inserted");
-              });
-            },
-            function (res) {
-              callBack("Duplicate");
-              console.log("duplicate", res);
-            }
-          );
+          db.graph.findOne({ iframe_url: data.iframe_url }, function () {
+            db.graph.upsert(data, function () {
+              callBack("Inserted");
+              console.log("inserted");
+            });
+          });
         });
       },
       function () {

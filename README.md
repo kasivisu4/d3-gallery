@@ -6,7 +6,7 @@ In this project, the user can search the d3 graph by task, find all the graphs t
 
 ## Documentation :
 
-Design / Business Requirements : [a link](https://github.com/kasivisu4/d3-gallery/blob/main/Documents/Design/d3-gallery-design.docx)
+Design / Business Requirements : [d3-gallery-design.docx](https://github.com/kasivisu4/d3-gallery/blob/main/Documents/Design/d3-gallery-design.docx)
 
 ## Contributors :
 

@@ -12,7 +12,7 @@ Also, Used the Minimongo IndexDB to store the data in the Browser Storage.
 
 ## Documentation :
 
-Design / Business Requirements : [d3-gallery-design.docx](https://github.com/kasivisu4/d3-gallery/blob/main/Documents/Design/d3-gallery-design.pdf)
+Design / Business Requirements : [d3-gallery-design](https://github.com/kasivisu4/d3-gallery/blob/main/Documents/Design/d3-gallery-design.pdf)
 
 JSDoc : [jsdoc](https://github.com/kasivisu4/d3-gallery/tree/main/Documents/JsDoc)
 

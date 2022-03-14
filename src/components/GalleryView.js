@@ -63,6 +63,7 @@ class GalleryView extends Component {
 GalleryView.propTypes = {
   graphs_array: PropTypes.arrayOf(PropTypes.object).isRequired,
   type_desc_array: PropTypes.arrayOf(PropTypes.object).isRequired,
+  details_page: PropTypes.func.isRequired,
 };
 
 export default GalleryView;

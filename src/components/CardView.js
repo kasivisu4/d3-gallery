@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 /**
  * Class for displaying Card component
@@ -73,3 +74,8 @@ export default class CardView extends Component {
     );
   }
 }
+
+CardView.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.object).isRequired,
+  details_page: PropTypes.func.isRequired,
+};

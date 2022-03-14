@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import PropTypes from "prop-types";
 class GraphView extends Component {
   /**
    * Renders the description Container
@@ -45,7 +45,7 @@ class GraphView extends Component {
               width="850"
             />
           </div>
-          {this.DetailsContainer()}
+          {this.detailsContainer()}
         </div>
       </div>
     );
@@ -53,3 +53,9 @@ class GraphView extends Component {
 }
 
 export default GraphView;
+
+GraphView.propTypes = {
+  card: PropTypes.object.isRequired,
+  type_desc_array: PropTypes.arrayOf(PropTypes.object).isRequired,
+  update_details_page: PropTypes.func.isRequired,
+};

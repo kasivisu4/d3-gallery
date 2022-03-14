@@ -59,7 +59,7 @@ export default class AddGraph extends Component {
    */
   DataStatus = () => {
     switch (this.state.data_insert_status) {
-      case "Success":
+      case "Inserted":
         return (
           <div className="alert alert-success" role="alert">
             Data was inserted successfully!! Hurrah!
@@ -101,11 +101,10 @@ export default class AddGraph extends Component {
         publisher,
         task,
       });
+      this.storeDataIntoIndexedDB(newGraph, this.callBack);
     } catch (e) {
       this.setState({ data_insert_status: "Error" });
     }
-    this.storeDataIntoIndexedDB(newGraph, this.callBack);
-    console.log(this.state);
   };
 
   /***

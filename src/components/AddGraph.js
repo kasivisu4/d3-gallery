@@ -3,6 +3,9 @@ import { Graph } from "../models/Graph.js";
 import minimongo from "minimongo";
 import { Link } from "react-router-dom";
 
+/**
+ *  Class to Add Graph to Local Storage Minimongo
+ */
 export default class AddGraph extends Component {
   constructor(props) {
     super(props);
@@ -12,12 +15,19 @@ export default class AddGraph extends Component {
       data_insert_status: "",
     };
   }
-  cbk = (message) => {
-    this.setState({ data_insert_status: message });
-    console.log(this.state);
+
+  /**
+   *  Call Back Function for fetching the data status
+   */
+  callBack = (data_status) => {
+    this.setState({ data_insert_status: data_status });
   };
 
-  storeDataIntoIndexedDB(data, cbk) {
+  /**
+   *  Function to store data into the Browser storage index db
+   * @param ({data}, {call_back})
+   */
+  storeDataIntoIndexedDB(data, callBack) {
     let IndexedDb = minimongo.IndexedDb;
 
     let db = new IndexedDb(
@@ -27,24 +37,27 @@ export default class AddGraph extends Component {
           db.graph.find({ iframe_url: data.iframe_url }).fetch(
             function () {
               db.graph.upsert(data, function () {
-                cbk("Inserted");
+                callBack("Inserted");
                 console.log("inserted");
               });
             },
             function (res) {
-              cbk("Duplicate");
+              callBack("Duplicate");
               console.log("duplicate", res);
             }
           );
         });
       },
       function () {
-        cbk("Error");
+        callBack("Error");
       }
     );
   }
 
-  data_status = () => {
+  /**
+   * TO Check the status of data
+   */
+  DataStatus = () => {
     switch (this.state.data_insert_status) {
       case "Success":
         return (
@@ -63,6 +76,11 @@ export default class AddGraph extends Component {
         return <div> # Please Fill all the fields</div>;
     }
   };
+
+  /**
+   * Function to add the data once user clicks on the add button
+   * @param {event}
+   */
 
   addGraph = (event) => {
     event.preventDefault();
@@ -86,11 +104,14 @@ export default class AddGraph extends Component {
     } catch (e) {
       this.setState({ data_insert_status: "Error" });
     }
-    this.storeDataIntoIndexedDB(newGraph, this.cbk);
+    this.storeDataIntoIndexedDB(newGraph, this.callBack);
     console.log(this.state);
   };
 
-  AddForm() {
+  /***
+   * Form Component
+   */
+  addForm() {
     return (
       <form ref={this.refForm}>
         <div className="mb-3 p-3">
@@ -108,7 +129,7 @@ export default class AddGraph extends Component {
             {" "}
             Add
           </button>
-          {this.data_status()}
+          {this.DataStatus()}
         </div>
       </form>
     );
@@ -126,7 +147,7 @@ export default class AddGraph extends Component {
           Please fill the details to add your graph
         </h4>
         <div className="row">
-          <div className="col-3">{this.AddForm()}</div>
+          <div className="col-3">{this.addForm()}</div>
           <div className="col-9">
             <div className="input-group mb-3">
               <input

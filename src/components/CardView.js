@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+/**
+ * Class for displaying Card component
+ */
 export default class CardView extends Component {
   constructor(props) {
     super(props);
@@ -8,12 +11,18 @@ export default class CardView extends Component {
     };
   }
 
+  /**
+   * Render the next card when the user clicks on right button
+   */
   moveRight = () => {
     if (this.state.index < this.props.cards.length - 3) {
       this.setState({ index: this.state.index + 1 });
     }
   };
 
+  /**
+   * Render the next card when the user clicks on left button
+   */
   moveLeft = () => {
     if (this.state.index > 0) {
       this.setState({ index: this.state.index - 1 });

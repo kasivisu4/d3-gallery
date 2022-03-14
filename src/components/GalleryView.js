@@ -1,13 +1,22 @@
 import { Component } from "react";
 import CardView from "./CardView";
 import PropTypes from "prop-types";
+
+/**
+ * Class for displaying all the cards in the Gallery
+ */
 class GalleryView extends Component {
   constructor(props) {
     super(props);
     this.display.bind(this);
   }
 
-  get_desc = (graph_type) => {
+  /**
+   * Function to get the description of the Graph type
+   * @param {*} graph_type
+   * @returns description component
+   */
+  getDescription = (graph_type) => {
     let desc = this.props.type_desc_array.filter(
       (d) => d.graph_type === graph_type.toUpperCase()
     );
@@ -22,6 +31,9 @@ class GalleryView extends Component {
     );
   };
 
+  /**
+   * Function to rended the Graphs
+   */
   display() {
     let types = [...new Set(this.props.graphs_array.map((d) => d.graph_type))];
     return (
@@ -30,7 +42,7 @@ class GalleryView extends Component {
           return (
             <div className="mt-1" key={index}>
               <hr />
-              {this.get_desc(t)}
+              {this.getDescription(t)}
               <CardView
                 cards={this.props.graphs_array.filter(
                   (d) => d.graph_type === t

@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+
+/**
+ *  Class for the displaying the NavBar and the Footer
+ */
 export default class BaseView extends Component {
+  /**
+   * Display the children Component
+   */
   displayChildren = () => {
     return <div>{this.props.children}</div>;
   };

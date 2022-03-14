@@ -1,6 +1,32 @@
 import { Component } from "react";
 
 class GraphView extends Component {
+  /**
+   * Renders the description Container
+   * @returns description container
+   */
+  detailsContainer = () => {
+    return (
+      <div className="h-auto d-inline-block ">
+        <div className="card-body">
+          <h5 className="card-title text-center">{this.props.card.title}</h5>
+          <p className="card-text">
+            {
+              this.props.type_desc_array.filter(
+                (d) => d.graph_type === this.props.card.graph_type
+              )[0].desc
+            }
+          </p>
+          <h6> Publisher : {this.props.card.publisher} </h6>
+          <br />
+          <h6> Source : {this.props.card.src} </h6>
+          <hr />
+          <h6> Task : {this.props.card.task} </h6>
+        </div>
+      </div>
+    );
+  };
+
   render() {
     return (
       <div>
@@ -19,25 +45,7 @@ class GraphView extends Component {
               width="850"
             />
           </div>
-          <div className="h-auto d-inline-block ">
-            <div className="card-body">
-              <h5 className="card-title text-center">
-                {this.props.card.title}
-              </h5>
-              <p className="card-text">
-                {
-                  this.props.type_desc_array.filter(
-                    (d) => d.graph_type === this.props.card.graph_type
-                  )[0].desc
-                }
-              </p>
-              <h6> Publisher : {this.props.card.publisher} </h6>
-              <br />
-              <h6> Source : {this.props.card.src} </h6>
-              <hr />
-              <h6> Task : {this.props.card.task} </h6>
-            </div>
-          </div>
+          {this.DetailsContainer()}
         </div>
       </div>
     );

@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# PDP Home Work 1 : Creating the Reference Manger to manage Books,Articles and WebPages
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description :
 
-## Available Scripts
+In this project, there were totally 5 classes:
 
-In the project directory, you can run:
+1. Publication (Parent)
+2. Book (Child of 1)
+3. Article (Child of 1)
+4. WebPages (Child of 1)
+5. Reference Manager - It has the following methods:
+   - addWebPage - Create the Publication for the Webpage and pushes to publications array. It requires title, author, year, url parameters
+   - addBook - Create the Publication for the Book and pushes to publications array. It requires title, author, publisher, location, year parameters
+   - addArticle - Create the Publication for the Article and pushes to publications array. It requires title, author, journal_name, volume, issue, year parameters
+   - printCitations - Based on citation type input it will print all the objects in the publications array in the citation provided format.
+   - removeReference - Based on the title, author, year, type parameters it will remove the object and prints the removed object and calls the get_stats_year_wise to re-calculate the stats
+   - get_stats_year_wise - It calculate the stats of the publications based on the year and type of publication and stores in the stats_year_wise object.
+   - stats_year_wise - Based on the stats_year_wise object it prints the Bar chart
 
-### `npm start`
+## Creative Feature :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Calculating the stats for the publications in year & type level and printing the bar chart in the console with the help of get_stats_year_wise and stats_year_wise
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Stats Image](stats.png)
 
-### `npm test`
+2. Created the Variable named Error_message which will store all the errors specific to object creation instead of throwing one exception by exception while creating the object.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+Ex : Class Name {
+      name(should be string and not null),
+      age(number)
 
-### `npm run build`
+   }
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+while creating the new Name("","25") Object
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Generally we validate the input parameters first name is not null and once we updated the first name then age will throw an error - basically 2 times
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In my case, new Name("","25") the Error_message will be appending all the errors while validating and then it will throw at a time while creating the object.
 
-### `npm run eject`
+## Contributors :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Kasi Viswanath ![![](https://github.com/remarkablemark.png?size=50)](https://github.com/remarkablemark)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run Command :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+node main.js
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2022 MIT

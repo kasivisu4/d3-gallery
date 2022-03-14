@@ -4,6 +4,10 @@
 
 In this project, the user can search the d3 graph by task, find all the graphs that are feasible to his task and can adapt it. Apart, User can also add his own d3 graph to showcase to other viewers...
 
+## Documentation :
+
+Design / Business Requirements : [a link](https://github.com/kasivisu4/d3-gallery/blob/main/Documents/Design/d3-gallery-design.docx)
+
 ## Contributors :
 
 Kasi Viswanath ![![](https://github.com/remarkablemark.png?size=50)](https://github.com/remarkablemark)

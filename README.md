@@ -23,6 +23,8 @@ Kasi Viswanath ![![](https://github.com/remarkablemark.png?size=50)](https://git
 ## Run Command :
 
 ```
+cd d3-gallery
+npm install
 npm start
 http://localhost:3000/d3-gallery
 ```
